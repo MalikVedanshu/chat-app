@@ -1,0 +1,114 @@
+body {
+    background-color: rgb(212, 110, 217);
+}
+div {
+    font-size: large;
+}
+
+.myChat,
+.roomPage {
+
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    font-family: monospace;
+    position: relative;
+}
+.myChat {
+    
+    align-items: center;
+    justify-content: center;
+}
+.roomPage {
+    align-items: center;
+}
+
+.idBox {
+    width: 15em;
+    height: 2em;
+    border-radius: 7px;
+    border: none;
+}
+
+input[type="text"], input[type="button"] {
+    font-size: medium;
+    font-weight:bold;
+    font-family: monospace;
+}
+
+.startbuttons {
+    margin: 5px;
+}
+
+.startbuttons input {
+    height: 2em;
+    border-radius: 7px;
+    border: none;
+    margin: 2px;
+}
+
+.chatBox {
+    width: 95%;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    padding: 7px;
+    height: 75vh;
+    /* overflow-y: hidden; */
+    overflow-x: scroll;
+}
+.chatBox::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .chatBox {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+.rightmsg,
+.leftmsg {
+    width: fit-content;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 7px;
+}
+
+.rightmsg {
+    background-color: rgb(58, 119, 189);
+    float: right;
+    clear: both;
+}
+
+.leftmsg {
+    background-color: rgb(117, 140, 42);
+    float: left;
+    clear: both;
+}
+.typeAndSendBox {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    margin: 2px;
+    padding: 2px;
+    position: absolute;
+    bottom: 0px;
+    height: auto;
+
+}
+.typeAndSendBox input {
+    border-radius: 5px;
+    border: 2px solid black;
+    margin: 1px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+}
+input[type="button"],input[type="submit"] {
+    cursor: pointer;
+    font-size: medium;
+}
+input[type="button"]:hover,input[type="submit"]:hover {
+    background-color: black;
+    color: white;
+}
