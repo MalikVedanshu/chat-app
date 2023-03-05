@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 const io = require('socket.io-client');
-const socket = io('http://172.20.10.13:8000');
+const socket = io('http://192.168.1.33:5000');
 
 function Home() {
-    const [isConnected, setIsConnected] = useState("Not connected");
+    
     const [chatId, setChatId] = useState("");
 
     const createRoom = (e) => {
@@ -11,9 +11,7 @@ function Home() {
     }
 
     const joinRoom = async () => {
-        await socket.emit('user-joined', () => {
-            setIsConnected(`new user has joined.`);
-        });
+        console.log('you joined a room')
     }
 
     
@@ -22,7 +20,7 @@ function Home() {
         <>
             <div className="myChat">
                 <h1>Create Chat </h1>
-                <h2>{isConnected}</h2>
+                
                 <input type="text" className="idBox" placeholder="Create Chat ID" onChange={(e) => { setChatId(e.target.value) }} />
                 <div className="startbuttons">
                     <input type="button" value="Create Room" onClick={createRoom} />
