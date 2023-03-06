@@ -10,7 +10,6 @@ function App () {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/room" element={<Chatroom />} />
-        <Route path="/room/:roomId" element={<Chatroom />} />
       </Routes>
     </>
   )
