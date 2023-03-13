@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const io = require("socket.io-client")
-const socket = io("http://172.20.10.14:5000")
+const socket = io("http://localhost:5000")
 
 
 function Chatroom() {
