@@ -26,7 +26,7 @@ io.on('connection', socket => {
         
     })
     socket.on('join-room', (room,name )=> {
-        socket.join(room)
+        socket.join(room);
         if(name === "") {
             socket.to(room).emit("someone-joined", "Someone");
         } else {
