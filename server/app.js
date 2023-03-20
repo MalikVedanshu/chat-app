@@ -1,13 +1,13 @@
-const express = require('express');
+import express from 'express';
 const app = express();
-const http = require("http");
-const { Server } = require('socket.io');
-const path = require('path');
+import http from "http";
+import { Server } from 'socket.io';
+// const path = require('path');
 // const cors = require("cors");
 
 let port = 5000;
 
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'build')));
 
 // app.use(cors())
 
@@ -23,7 +23,7 @@ const io = new Server(server);
 // });
 
 io.on('connection', socket => {
-    console.log(socket.id);
+    
     socket.on("send-sms", (msg, room,name) => {
         if(name === "") {
             socket.to(room).emit("recieve-sms", [msg, "someone"]);
@@ -47,4 +47,5 @@ io.on('connection', socket => {
 server.listen(port, () => {
     console.log(`Server is running on port ${port}.`)
 })
+
 
